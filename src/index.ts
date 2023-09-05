@@ -1,5 +1,14 @@
-export const sum = (a: number, b: number): number => a + b;
+import express from "express";
 
-export const stringToNumber = <T>(a: T extends `${number}` ? T : never) => {
-  return parseInt(a);
-};
+const app = express();
+let count = 0;
+app.get("/", (_req, res) => {
+  console.log("User is on home page");
+  count++;
+  debugger;
+  res.send("Hi");
+});
+
+app.listen(3000, () => {
+  console.log("server listening on port 3000");
+});

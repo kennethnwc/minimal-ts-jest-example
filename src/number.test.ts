@@ -1,4 +1,4 @@
-import { stringToNumber, sum } from ".";
+import { stringToNumber, sum } from "./function";
 
 beforeEach(() => {
   console.log("before test");
